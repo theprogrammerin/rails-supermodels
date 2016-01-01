@@ -47,3 +47,5 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'simple_enum', '1.6.9'
