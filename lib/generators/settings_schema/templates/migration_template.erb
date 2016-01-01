@@ -1,0 +1,15 @@
+class Create<%= @module_name %>Settings < ActiveRecord::Migration
+  def up
+    create_table :<%= @table_name %> do |t|
+      t.string :key, null: false
+      t.string :value
+      t.string :env, null: false, default: 'development'
+
+      t.timestamps
+    end
+  end
+
+  def down
+    drop_table :<%= @table_name %>
+  end
+end
